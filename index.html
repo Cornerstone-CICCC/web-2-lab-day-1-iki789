@@ -1,14 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>City/Weather Search</title>
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <!-- YOUR CODE HERE -->
-  
-  <script src="./app.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>City/Weather Search</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="">
+    <!-- YOUR CODE HERE -->
+    <div class="search-container">
+      <form id="searchForm">
+        <input
+          type="search"
+          name="search"
+          placeholder="Enter city name..."
+          required
+        />
+        <button type="submit">Search</button>
+      </form>
+    </div>
+
+    <div class="cover">
+      <div class="cover-content">
+        <div id="city"></div>
+        <div id="temp"></div>
+      </div>
+    </div>
+
+    <div class="table-container">
+      <table id="table" style="display: none">
+        <tr>
+          <th style="width: 47%">Country</th>
+          <td id="country"></td>
+        </tr>
+        <tr>
+          <th>Timezone</th>
+          <td id="timezone"></td>
+        </tr>
+        <tr>
+          <th>Population</th>
+          <td id="population"></td>
+        </tr>
+        <tr>
+          <th>Tomorrow's Forecast</th>
+          <td>
+            <div>Low: <span id="low"></span></div>
+            <div>high: <span id="high"></span></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="error" style="display: none">
+      Failed fetching weather forecast. Please ensure city entered is correct.
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
